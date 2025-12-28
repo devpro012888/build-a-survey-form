@@ -10,17 +10,73 @@
             provide FreeCodeCamp with valuable feedback based on your learning experience.  Please 
             take a few minutes to fill out this survey and help us improve our curriculum and resources.
         </p>
-        <form id="survey-form">
+        <form id="survey-form" action="mailto:christopher.e.white2@gmail.com" method="post">
             <fieldset>
                 <legend><b>Personal Information</b></legend>
-                <label>First and Last Name:</label>
-                <input type="text" id="name" placeholder="Christopher White">
-                <label>Email:</label>
-                <input type="email" id="email" placeholder="@gmail.com">
-                <label>Age:</label>
-                <input type="number" id="age" placeholder="37">
+                <label id="name-label">First and Last Name:</label>
+                <input type="text" id="name" placeholder="Christopher White" required>
+                <label id="email-label">Email:</label>
+                <input type="email" id="email" placeholder="@gmail.com" required>
+                <label id="number-label">Age:</label>
+                <input type="number" id="number" placeholder="37" min="5" max="99">
+                <label>Role:</label>
+                <select id="dropdown">
+                    <option>Select your current role</option>
+                    <option>Student</option>
+                    <option>Self-Taught</option>
+                    <option>Bootcamp</option>
+                    <option>Career Switcher</option>
+                    <option>Other</option>
+                </select>
             </fieldset>
+            <br>
+            <fieldset>
+                <legend><b>Favorite FreeCodeCamp Certification</b></legend>
+                <input type="checkbox" id="web-design" name="web-design" value="web">
+                <label>Responsive Web Design Certification</label>
+                <br>
+                <input type="checkbox" id="javascript" name="javascript" value="js">
+                <label>JavaScript Certification</label>
+                <br>
+                <input type="checkbox" id="front-end-libraries" name="front-end-libraries" value="front-end">
+                <label>Front End Development Libraries Certification</label>
+                <br>
+                <input type="checkbox" id="python" name="python" value="python">
+                <label>Python Certification</label>
+                <br>
+                <input type="checkbox" id="relational-databases" name="relational-databases" value="relational-databases">
+                <label>Relational Databases Certification</label>
+                <br>
+                <input type="checkbox" id="back-end-development" name="back-end-development" value="back-end-development">
+                <label>Back End Development and APIs Certification</label>
+                <br>
+                <input type="checkbox" id="full-stack" name="full-stack" value="full-stack">
+                <label>Certified Full Stack Developer Curriculum</label>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend><b>How many hours/week do you spend on FreeCodeCamp?</b></legend>
+                <input type="radio" name="hours" value="1-5">
+                <label>1-5 hours</label>
+                <br>
+                <input type="radio" name="hours" value="6-10">
+                <label>6-10 hours</label>
+                <br>
+                <input type="radio" name="hours" value="11-15">
+                <label>11-15 hours</label>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend><b>What should FreeCodeCamp improve?</b></legend>
+                <textarea id="improvements" name="improvements" rows="5" cols="80" placeholder="FreeCodeCamp should improve..."></textarea>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend><b>Additional Comments</b></legend>
+                <textarea id="comments" name="comments" rows="5" cols="80" placeholder="Add additional comments here..."></textarea>
+            </fieldset>
+            <br>
+            <button type="submit" id="submit" >Submit</button>
         </form>
-
     </body>
 </html>
