@@ -1,4 +1,4 @@
-# build-a-survey-form
+# Build A Survey Form
 FreeCodeCamp Certification Project - Build a Survey Form
 
 ## Description
